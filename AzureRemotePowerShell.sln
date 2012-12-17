@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzurePerfTools.TableTransportChannel", "..\azure-table-transport\AzurePerfTools.TableTransportChannel\AzurePerfTools.TableTransportChannel.csproj", "{5AE259A4-5E28-4CE9-9048-1291BF241F77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzurePerfTools.PowerShellContracts", "AzurePerfTools.PowerShellContracts\AzurePerfTools.PowerShellContracts.csproj", "{9A30C74A-66AA-4CCB-8D01-72EA70E64A86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzurePerfTools.PowerShellClientConsole", "AzurePerfTools.PowerShellClientConsole\AzurePerfTools.PowerShellClientConsole.csproj", "{A09527ED-6679-48A6-BA80-3B53AA87A031}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzurePerfTools.PowerShellHost", "AzurePerfTools.PowerShellHost\AzurePerfTools.PowerShellHost.csproj", "{54A16AB4-00CE-40C8-8751-21E9AF5F538D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzurePerfTools.PowerShellServerConsole", "AzurePerfTools.PowerShellServerConsole\AzurePerfTools.PowerShellServerConsole.csproj", "{4C90D7F4-C2F2-4691-A013-24C88D38FF71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzurePerfTools.PowerShellWindowsService", "AzurePerfTools.PowerShellWindowsService\AzurePerfTools.PowerShellWindowsService.csproj", "{06F41040-7BA9-43B6-BF85-539E196D0963}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4C98B780-08F7-462E-B4D0-354A428607C2}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5AE259A4-5E28-4CE9-9048-1291BF241F77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AE259A4-5E28-4CE9-9048-1291BF241F77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AE259A4-5E28-4CE9-9048-1291BF241F77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AE259A4-5E28-4CE9-9048-1291BF241F77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A30C74A-66AA-4CCB-8D01-72EA70E64A86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A30C74A-66AA-4CCB-8D01-72EA70E64A86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A30C74A-66AA-4CCB-8D01-72EA70E64A86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A30C74A-66AA-4CCB-8D01-72EA70E64A86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A09527ED-6679-48A6-BA80-3B53AA87A031}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A09527ED-6679-48A6-BA80-3B53AA87A031}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A09527ED-6679-48A6-BA80-3B53AA87A031}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A09527ED-6679-48A6-BA80-3B53AA87A031}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54A16AB4-00CE-40C8-8751-21E9AF5F538D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54A16AB4-00CE-40C8-8751-21E9AF5F538D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54A16AB4-00CE-40C8-8751-21E9AF5F538D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54A16AB4-00CE-40C8-8751-21E9AF5F538D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C90D7F4-C2F2-4691-A013-24C88D38FF71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C90D7F4-C2F2-4691-A013-24C88D38FF71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C90D7F4-C2F2-4691-A013-24C88D38FF71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C90D7F4-C2F2-4691-A013-24C88D38FF71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06F41040-7BA9-43B6-BF85-539E196D0963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06F41040-7BA9-43B6-BF85-539E196D0963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06F41040-7BA9-43B6-BF85-539E196D0963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06F41040-7BA9-43B6-BF85-539E196D0963}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
