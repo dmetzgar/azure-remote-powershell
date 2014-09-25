@@ -12,7 +12,7 @@ namespace AzurePerfTools.PowerShellWindowsService
         {
         }
 
-        public string StartPowerShell(string providers, string perfCounters)
+        public string StartPowerShell()
         {
             this.Write("\nPSConsoleSample: ");
             string output = this.DumpOutput();

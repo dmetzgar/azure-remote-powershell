@@ -6,7 +6,7 @@ namespace AzurePerfTools.PowerShellContracts
     public interface IRemotePowerShellCommands
     {
         [OperationContract]
-        string StartPowerShell(string providers, string perfCounters);
+        string StartPowerShell();
 
         [OperationContract]
         string SendCommand(string commandText);

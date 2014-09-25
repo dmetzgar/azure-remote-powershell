@@ -16,9 +16,9 @@ namespace AzurePerfTools.PowerShellClientConsole
         {
         }
 
-        public string StartPowerShell(string providers, string perfCounters)
+        public string StartPowerShell()
         {
-            return base.Channel.StartPowerShell(providers, perfCounters);
+            return base.Channel.StartPowerShell();
         }
 
         public string SendCommand(string commandText)
