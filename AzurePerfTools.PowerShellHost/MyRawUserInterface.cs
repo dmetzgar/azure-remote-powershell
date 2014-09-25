@@ -12,7 +12,7 @@
     internal class MyRawUserInterface : PSHostRawUserInterface
     {
         ConsoleColor backgroundColor = ConsoleColor.Black;
-        Size bufferSize = new Size(1000, 9999);
+        Size bufferSize = new Size(80, 9999);
         int cursorSize = 1;
         ConsoleColor foregroundColor = ConsoleColor.White;
 

@@ -17,7 +17,7 @@ namespace AzurePerfTools.PowerShellClientConsole
                 string startResponse = client.StartPowerShell(Providers, PerfCounters);
                 Console.Write(startResponse);
 
-                RestartIis(client, "test1");
+                //RestartIis(client, "test1");
 
                 string command;
                 do
