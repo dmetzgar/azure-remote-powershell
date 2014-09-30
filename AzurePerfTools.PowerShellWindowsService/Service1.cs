@@ -1,4 +1,7 @@
-﻿using System.ServiceModel;
+﻿using AzurePerfTools.PowerShellContracts;
+using Microsoft.WindowsAzure;
+using Microsoft.WindowsAzure.ServiceRuntime;
+using System.ServiceModel;
 using System.ServiceProcess;
 
 namespace AzurePerfTools.PowerShellWindowsService
@@ -15,6 +18,17 @@ namespace AzurePerfTools.PowerShellWindowsService
         protected override void OnStart(string[] args)
         {
             this.remotePowerShellHost = new ServiceHost(typeof(RemotePowerShellCommands));
+            this.remotePowerShellHost.AddServiceEndpoint(
+                typeof(IRemotePowerShellCommands),
+                new AzurePerfTools.TableTransportChannel.AzureTableTransportBinding(
+                    new TableTransportChannel.AzureTableTransportBindingElement()
+                    {
+                        ConnectionString = CloudConfigurationManager.GetSetting("AzurePerfTools.PowerShellWindowsService.ConnectionString"),
+                        DeploymentId = RoleEnvironment.DeploymentId,
+                        RoleName = RoleEnvironment.CurrentRoleInstance.Role.Name,
+                        InstanceName = RoleEnvironment.CurrentRoleInstance.Id,
+                    }),
+                "azure.table:PerfCommands");
             this.remotePowerShellHost.Open();
         }
 
