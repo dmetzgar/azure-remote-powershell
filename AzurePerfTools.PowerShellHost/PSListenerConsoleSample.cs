@@ -340,5 +340,10 @@
             this.myHost.currentOutput.Clear();
             return s;
         }
+
+        protected string GetCurrentOutput()
+        {
+            return this.myHost.currentOutput.ToString();
+        }
     }
 }

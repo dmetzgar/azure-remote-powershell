@@ -1,5 +1,7 @@
 ﻿using AzurePerfTools.PowerShellContracts;
 using AzurePerfTools.PowerShellHost;
+using Microsoft.WindowsAzure.ServiceRuntime;
+using System;
 using System.ServiceModel;
 
 namespace AzurePerfTools.PowerShellWindowsService
@@ -14,6 +16,21 @@ namespace AzurePerfTools.PowerShellWindowsService
 
         public string StartPowerShell()
         {
+            string roleRoot = Environment.GetEnvironmentVariable("RdRoleRoot");
+
+            // Add path for PerfView
+            string perfViewPath = string.Format(@"{0}\approot\bin", roleRoot);
+            this.AddToPath(perfViewPath);
+
+            // Set the output directory
+            LocalResource profileStorage;
+            try
+            {
+                profileStorage = RoleEnvironment.GetLocalResource("ProfileStorage");
+                this.Execute(string.Format(@"$profileStorage = ""{0}""", profileStorage.RootPath));
+            }
+            catch (RoleEnvironmentException) { }
+
             this.Write("\nPSConsoleSample: ");
             string output = this.DumpOutput();
             return output;
@@ -30,6 +47,23 @@ namespace AzurePerfTools.PowerShellWindowsService
             this.Write("\nPSConsoleSample: ");
             string output = this.DumpOutput();
             return output;
+        }
+
+        private void AddToPath(string newPath)
+        {
+            string before = base.GetCurrentOutput();
+            this.Execute(@"$env:Path");
+            string after = base.GetCurrentOutput();
+            string currPath = after;
+            if (!string.IsNullOrEmpty(before))
+            {
+                after = after.Replace(before, "").Trim();
+            }
+
+            if (!currPath.Contains(newPath))
+            {
+                this.Execute(string.Format(@"$env:Path += "";{0}""", newPath));
+            }
         }
     }
 }
